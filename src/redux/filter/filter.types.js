@@ -1,0 +1,4 @@
+export const filtersActionTypes = {
+  SET_PRIORITY_FILTER: "SET_PRIORITY_FILTER",
+  SET_STATUS_FILTER: "SET_STATUS_FILTER",
+};

@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Farro-Bold";
+  color: #edf5e1;
+  text-shadow: -3px 3px #2e8f59;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+    text-shadow: -2px 2px #2e8f59;
+  }
+}

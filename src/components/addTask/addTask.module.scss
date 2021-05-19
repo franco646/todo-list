@@ -1,0 +1,30 @@
+.label {
+  font-family: "Farro-Bold";
+  color: #05386b;
+}
+
+.button {
+  margin: auto;
+  width: 7rem;
+  color: #edf5e1;
+  background-color: #05386b;
+  border-color: #0960b8;
+}
+
+.button:active {
+  background-color: #0960b8;
+  border-color: #05386b;
+  color: #edf5e1;
+}
+
+.button:hover {
+  background-color: #0960b8;
+  border-color: #05386b;
+  color: #edf5e1;
+}
+
+.button:focus {
+  background-color: #0960b8;
+  border-color: #05386b;
+  color: #edf5e1;
+}

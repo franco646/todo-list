@@ -1,0 +1,49 @@
+.card {
+  background-color: #05386b;
+  border-radius: 0.25rem;
+  color: #edf5e1;
+  margin: 1rem;
+  font-family: "Farro-Regular";
+  box-shadow: -10px 10px 0px 0px #379683;
+  -webkit-box-shadow: -10px 10px 0px 0px #379683;
+  -moz-box-shadow: -10px 10px 0px 0px #379683;
+}
+
+hr {
+  display: block;
+  border: none;
+  height: 3px;
+  margin-bottom: 1rem !important;
+  background-color: #5cdb95;
+  margin: 0px;
+}
+
+.button {
+  width: 7rem;
+  color: #05386b;
+  background-color: #5cdb95;
+  border-color: #85ffbc;
+}
+
+.button:active {
+  background-color: #85ffbc;
+  border-color: #2e8f59;
+  color: #042b52;
+}
+
+.button:hover {
+  background-color: #85ffbc;
+  border-color: #2e8f59;
+  color: #042b52;
+}
+
+.button:focus {
+  background-color: #85ffbc;
+  border-color: #2e8f59;
+  color: #042b52;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-family: "Farro-Bold";
+}

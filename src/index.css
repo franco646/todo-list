@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #8ee4af !important;
+}
+
+@font-face {
+  font-family: "Farro-Bold";
+  src: local("Farro-Bold"),
+    url("./font/Farro/Farro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Farro-Regular";
+  src: local("Farro-Regular"),
+    url("./font/Farro/Farro-Regular.ttf") format("truetype");
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
