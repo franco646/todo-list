@@ -1,7 +1,7 @@
 import React from 'react'
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '../../../redux/test-utils';
 
-import { Filters } from '../filters';
+import Filters from '../filters';
 
 describe('<AddTask />', () => {
     it('should calls setPriorityFilter on change the priority filter', async () => {
