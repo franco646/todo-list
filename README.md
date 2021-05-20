@@ -6,7 +6,7 @@ _Puede ver una demostración en vivo de esta aplicación en el siguiente link:_
 
 https://franco646.github.io/todo-list/
 
-### Instalación y ejecución 🔧
+## Instalación y ejecución 🔧
 
 _Para correr la aplicación de manera local siga las instrucciones._
 
