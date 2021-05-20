@@ -11,15 +11,13 @@ import { Form, Col, Container } from "react-bootstrap";
 
 import { label } from "./filters.module.scss";
 
-export const Filters = ({ setPriorityFilter, setStatusFilter }) => {
+const Filters = ({ setPriorityFilter, setStatusFilter }) => {
   const handleStatusFilter = (e) => {
-    console.log('ESTATUS FILTER')
     const filter = e.target.value;
     setStatusFilter(filter);
   };
 
   const handlePriorityFilter = (e) => {
-    console.log('PRIORITY FILTER')
     const filter = e.target.value;
     setPriorityFilter(filter);
   };
@@ -30,18 +28,25 @@ export const Filters = ({ setPriorityFilter, setStatusFilter }) => {
       <Form.Row>
         <Col>
           <Form.Label className={label}>ESTADO</Form.Label>
-          <Form.Control as="select" onChange={handleStatusFilter} data-testid="select-status">
+          <Form.Control
+            as="select"
+            onChange={handleStatusFilter}
+            data-testid="select-status"
+          >
             {Object.keys(STATUS_FILTERS).map((filterKey) => (
-              <option>{STATUS_FILTERS[filterKey]}</option>
+              <option key={filterKey}>{STATUS_FILTERS[filterKey]}</option>
             ))}
           </Form.Control>
         </Col>
         <Col>
           <Form.Label className={label}>PRIORIDAD</Form.Label>
-          <button onClick={setStatusFilter}>FRANCO</button>
-          <Form.Control as="select" onChange={handlePriorityFilter} data-testid="select-priority">
+          <Form.Control
+            as="select"
+            onChange={handlePriorityFilter}
+            data-testid="select-priority"
+          >
             {Object.keys(PRIORITY_FILTERS).map((filterKey) => (
-              <option>{PRIORITY_FILTERS[filterKey]}</option>
+              <option key={filterKey}>{PRIORITY_FILTERS[filterKey]}</option>
             ))}
           </Form.Control>
         </Col>

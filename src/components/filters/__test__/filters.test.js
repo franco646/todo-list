@@ -1,26 +1,31 @@
-import React from 'react'
-import { render, fireEvent, screen } from '../../../redux/test-utils';
+import React from "react";
+import { render, fireEvent, screen, store } from "../../../redux/test-utils";
+import { PRIORITY_FILTERS, STATUS_FILTERS } from "../../../constants";
 
-import Filters from '../filters';
+import Filters from "../filters";
 
-describe('<AddTask />', () => {
-    it('should calls setPriorityFilter on change the priority filter', async () => {
-        const setFilterMock = jest.fn()
+describe("<AddTask />", () => {
+  it("should change the priority filter in the redux store", async () => {
+    render(<Filters />);
 
-        render(<Filters setPriorityFilter={setFilterMock} />)
+    fireEvent.change(screen.getByTestId("select-priority"), {
+      target: { value: PRIORITY_FILTERS.LOW },
+    });
 
-        fireEvent.change(screen.getByTestId('select-priority'), { target: { value: 2 } })
+    expect(store.getState().visibilityFilter.priority).toBe(
+      PRIORITY_FILTERS.LOW
+    );
+  });
 
-        expect(setFilterMock).toHaveBeenCalledTimes(1)
-    })
+  it("should change the status filter in the redux store", async () => {
+    render(<Filters />);
 
-    it('should calls setStatusFilter on change the priority filter', async () => {
-        const setFilterMock = jest.fn()
+    fireEvent.change(screen.getByTestId("select-status"), {
+      target: { value: STATUS_FILTERS.FINISHED },
+    });
 
-        render(<Filters setStatusFilter={setFilterMock} />)
-
-        fireEvent.change(screen.getByTestId('select-status'), { target: { value: 2 } })
-
-        expect(setFilterMock).toHaveBeenCalledTimes(1)
-    })
-})
+    expect(store.getState().visibilityFilter.status).toBe(
+      STATUS_FILTERS.FINISHED
+    );
+  });
+});

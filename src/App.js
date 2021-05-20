@@ -6,7 +6,6 @@ import Filters from "./components/filters/filters";
 
 import { title } from "./App.module.scss";
 
-
 function App() {
   return (
     <div>

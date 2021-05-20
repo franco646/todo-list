@@ -54,7 +54,7 @@ export class AddTask extends Component {
                 name="status"
               >
                 {Object.keys(STATUS_FILTERS).map((filterKey) => (
-                  <option>{STATUS_FILTERS[filterKey]}</option>
+                  <option key={filterKey}>{STATUS_FILTERS[filterKey]}</option>
                 ))}
               </Form.Control>
             </Col>
@@ -66,7 +66,7 @@ export class AddTask extends Component {
                 name="priority"
               >
                 {Object.keys(PRIORITY_FILTERS).map((filterKey) => (
-                  <option>{PRIORITY_FILTERS[filterKey]}</option>
+                  <option key={filterKey}>{PRIORITY_FILTERS[filterKey]}</option>
                 ))}
               </Form.Control>
             </Col>

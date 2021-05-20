@@ -8,7 +8,7 @@ import { card, button, cardTitle, cardText } from "./task.module.scss";
 
 const Task = ({ title, content, priority, status, deleteTask, id }) => {
   return (
-    <Card className={card}>
+    <Card className={card} data-testid="task-card">
       <Card.Body>
         <Row style={{ textAlign: "end" }}>
           <Col xs={8}></Col>

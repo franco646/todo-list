@@ -20,9 +20,8 @@ const TaskList = ({ tasks }) => {
             return accumulator;
           }, [])
           .map((task) => {
-            console.log(task);
             return (
-              <Row>
+              <Row key={task[0].id}>
                 <Col>
                   <Task
                     id={task[0].id}
@@ -47,7 +46,7 @@ const TaskList = ({ tasks }) => {
             );
           })
       ) : (
-        <Alert variant="success" className={alert}>
+        <Alert variant="success" className={alert} data-testid="alert">
           <Alert.Heading>NO HAY NINGUNA TAREA EN ESTA LISTA.</Alert.Heading>
         </Alert>
       )}
@@ -56,7 +55,6 @@ const TaskList = ({ tasks }) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     tasks: getVisibleTasks(state),
   };
