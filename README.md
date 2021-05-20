@@ -1,4 +1,5 @@
-# Todo list creada con React y Redux.
+# Todo list
+_Todo list creada con React y Redux_
 
 ## Introducción 🚀
 
